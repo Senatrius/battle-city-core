@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Projectile" format=3 uid="uid://bmu4e8djijom6"]
+
+[ext_resource type="Script" uid="uid://cf5ycoopib3m1" path="res://data/baseProjectile.gd" id="1_l1lu6"]
+[ext_resource type="Texture2D" uid="uid://d0nyl3r7rpddy" path="res://assets/sprites/projectiles.png" id="2_kr4av"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq3o4"]
+atlas = ExtResource("2_kr4av")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_l1lu6")
+damage = 1
+speed = 150
+sprite = SubResource("AtlasTexture_oq3o4")
+metadata/_custom_type_script = "uid://cf5ycoopib3m1"

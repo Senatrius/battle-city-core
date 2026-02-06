@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Tank" format=3 uid="uid://bvmgd8oqd4c26"]
+
+[ext_resource type="Texture2D" uid="uid://bxat58uiku5mx" path="res://assets/sprites/tanks.png" id="1_4vek2"]
+[ext_resource type="Script" uid="uid://cexseqmfl6ytu" path="res://data/baseTank.gd" id="1_ppb14"]
+[ext_resource type="Resource" uid="uid://bmu4e8djijom6" path="res://data/resources/playerProjectile.tres" id="2_a23st"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqf8r"]
+atlas = ExtResource("1_4vek2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibsgh"]
+atlas = ExtResource("1_4vek2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj4hb"]
+atlas = ExtResource("1_4vek2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_31c6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqf8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibsgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj4hb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_ppb14")
+health = 1
+speed = 35
+animatedSprite = SubResource("SpriteFrames_31c6n")
+projectileData = ExtResource("2_a23st")
+metadata/_custom_type_script = "uid://cexseqmfl6ytu"

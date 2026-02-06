@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b34rplbivvgrl"]
+
+[ext_resource type="Texture2D" uid="uid://bxat58uiku5mx" path="res://assets/sprites/tanks.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://c1vv510xwdnpn" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Resource" uid="uid://bvmgd8oqd4c26" path="res://data/resources/playerTank.tres" id="2_qhqgy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vyb7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
+size = Vector2(11, 9)
+
+[node name="Player" type="CharacterBody2D" unique_id=1317681465]
+motion_mode = 1
+script = ExtResource("1_g2els")
+tank_data = ExtResource("2_qhqgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=323772707]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1941621849]
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_tuyoq")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1723306071]
+position = Vector2(7, 0)

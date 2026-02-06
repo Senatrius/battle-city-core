@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c4mtxu8u0a0v1"]
+
+[ext_resource type="Texture2D" uid="uid://bxat58uiku5mx" path="res://assets/sprites/tanks.png" id="1_7p1mj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md0e3"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ra3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md0e3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
+size = Vector2(11, 9)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=843341777]
+motion_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27557481]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4ra3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=294581474]
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_5uy6h")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1888478447]
+position = Vector2(7, 0)
