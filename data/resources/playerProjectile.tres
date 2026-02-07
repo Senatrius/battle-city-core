@@ -10,6 +10,6 @@ region = Rect2(0, 0, 16, 16)
 [resource]
 script = ExtResource("1_l1lu6")
 damage = 1
-speed = 150
+speed = 100
 sprite = SubResource("AtlasTexture_oq3o4")
 metadata/_custom_type_script = "uid://cf5ycoopib3m1"

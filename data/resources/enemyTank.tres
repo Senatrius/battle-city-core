@@ -37,6 +37,7 @@ animations = [{
 script = ExtResource("1_eynsx")
 health = 1
 speed = 10
+firerate = 0.2
 animatedSprite = SubResource("SpriteFrames_3vlp5")
 projectileData = ExtResource("2_2e6ig")
 metadata/_custom_type_script = "uid://cexseqmfl6ytu"

@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
-size = Vector2(11, 9)
+size = Vector2(11, 10)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=843341777]
 motion_mode = 1
@@ -28,8 +28,8 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_4ra3w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=294581474]
-position = Vector2(-1.5, -0.5)
+position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_5uy6h")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1888478447]
-position = Vector2(7, 0)
+[node name="BulletSpawner" type="Marker2D" parent="." unique_id=1888478447]
+position = Vector2(4, 0)

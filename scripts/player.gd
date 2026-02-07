@@ -1,26 +1,44 @@
 extends CharacterBody2D
 @export var tank_data: Tank
+@export var projectile_scene: PackedScene
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var projectileOrigin: Marker2D = $Marker2D
+@onready var projectileOrigin: Marker2D = $BulletSpawner
+
+var cooldown_timer: float = 0.0
 
 func _ready() -> void:
 	sprite.sprite_frames = tank_data.animatedSprite
-	sprite.play("idle")
+	sprite.play("default")
 
-func _physics_process(_delta):
-# setup direction of movement
-	var direction = Input.get_vector("left", "right", "up", "down")
-# stop diagonal movement by listening for input then setting axis to zero
-	if Input.is_action_pressed("right") || Input.is_action_pressed("left"):
-		direction.y = 0
-	elif Input.is_action_pressed("up") || Input.is_action_pressed("down"):
-		direction.x = 0
-	else:
-		direction = Vector2.ZERO
+func _physics_process(delta) -> void:
+	cooldown_timer -= delta
 	
-#normalize the directional movement
-	direction = direction.normalized()
-# setup the actual movement
+	var direction = Input.get_vector("left", "right", "up", "down")
+	
+	if Input.is_action_pressed('right'):
+		direction = Vector2.RIGHT
+	elif Input.is_action_pressed('left'):
+		direction = Vector2.LEFT
+	elif Input.is_action_pressed('down'):
+		direction = Vector2.DOWN
+	elif Input.is_action_pressed('up'):
+		direction = Vector2.UP
+	
+	if direction != Vector2.ZERO:
+		rotation = direction.angle()
+	
 	velocity = (direction * tank_data.speed)
+	
+	if Input.is_action_just_pressed("shoot") and cooldown_timer <= 0.0:
+		shoot();
+		cooldown_timer = tank_data.firerate
+	
 	move_and_slide()
+	
+func shoot() -> void:
+	var bullet = projectile_scene.instantiate()
+	bullet.data = tank_data.projectileData
+	bullet.position = projectileOrigin.global_position;
+	bullet.rotation = rotation
+	get_parent().add_child(bullet)
