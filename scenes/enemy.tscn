@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://c4mtxu8u0a0v1"]
 
 [ext_resource type="Texture2D" uid="uid://bxat58uiku5mx" path="res://assets/sprites/tanks.png" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://cmq0dftrjocb1" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Resource" uid="uid://ctakjyp4ve84d" path="res://data/resources/enemyTank.tres" id="2_5uy6h"]
+[ext_resource type="PackedScene" uid="uid://dfq3ptc4gu7ur" path="res://scenes/projectile.tscn" id="3_c4w8v"]
+[ext_resource type="PackedScene" uid="uid://bm1a5js8fpoic" path="res://scenes/explode.tscn" id="4_c4w8v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_md0e3"]
 atlas = ExtResource("1_7p1mj")
@@ -20,10 +24,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
 size = Vector2(11, 10)
 
-[node name="Enemy" type="CharacterBody2D" unique_id=843341777]
+[node name="Enemy" type="CharacterBody2D" unique_id=843341777 groups=["enemy"]]
 collision_layer = 4
 collision_mask = 238
 motion_mode = 1
+script = ExtResource("1_md0e3")
+tank_data = ExtResource("2_5uy6h")
+projectile_scene = ExtResource("3_c4w8v")
+death_animation = ExtResource("4_c4w8v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27557481]
 texture_filter = 1
@@ -35,3 +43,7 @@ shape = SubResource("RectangleShape2D_5uy6h")
 
 [node name="BulletSpawner" type="Marker2D" parent="." unique_id=1888478447]
 position = Vector2(4, 0)
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=491959095]
+target_position = Vector2(30, 0)
+collision_mask = 131

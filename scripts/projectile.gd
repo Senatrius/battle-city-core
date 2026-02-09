@@ -47,24 +47,23 @@ func _on_body_entered(body: Node2D) -> void:
 			
 			if can_destroy:
 				body.erase_cell(map_pos)
+	
+	if body.is_in_group("enemy"):
+		body.die()
 		
-		queue_free()
+	queue_free()
 		
 func explode(tileset):
-	var tile_range = ceil(radius / 2)
+	var tile_range = ceil(radius / 2.0)
 	var explosion_epicenter = tileset.local_to_map(tileset.to_local(global_position))
 	
 	for x in range(-tile_range, tile_range + 1):
 		for y in range(-tile_range, tile_range + 1):
-			
 			var current_tile = explosion_epicenter + Vector2i(x, y)
 			
-			# Calculate if this specific tile is actually inside the circle radius
 			var tile_global_pos = tileset.to_global(tileset.map_to_local(current_tile))
 			if global_position.distance_to(tile_global_pos) <= radius:
 				
-				print("Checking tile at: ", current_tile, " Distance: ", global_position.distance_to(tile_global_pos))
-				# 5. Check if it's breakable
-				var data = tileset.get_cell_tile_data(current_tile)
-				if data and data.get_custom_data("breakable"):
+				var cell_data = tileset.get_cell_tile_data(current_tile)
+				if cell_data and cell_data.get_custom_data("breakable"):
 					tileset.erase_cell(current_tile)

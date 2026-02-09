@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dxgkf8yxnrhmr" path="res://assets/sprites/terrain.png" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b34rplbivvgrl" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c4mtxu8u0a0v1" path="res://scenes/enemy.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://d06ipxj3ffinh" path="res://scenes/enemy_goal.tscn" id="4_jyhfs"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_sugp2"]
 tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 2, 196608, 0, 3, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 2, 196609, 65536, 3, 2, 131072, 0, 65538, 131072, 1, 131074, 131072, 2, 196610, 131072, 2, 3, 196608, 0, 65539, 196608, 1, 131075, 131072, 2, 196611, 131072, 2)
@@ -52,78 +53,6 @@ texture = ExtResource("1_o5qli")
 5:1/0 = 0
 6:1/0 = 0
 7:1/0 = 0
-8:1/0 = 0
-8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-8:1/0/custom_data_0 = true
-9:1/0 = 0
-9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-9:1/0/custom_data_0 = true
-10:1/0 = 0
-10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-10:1/0/custom_data_0 = true
-11:1/0 = 0
-11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-11:1/0/custom_data_0 = true
-12:1/0 = 0
-12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-13:1/0 = 0
-13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-14:1/0 = 0
-14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-15:1/0 = 0
-15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-16:1/0 = 0
-16:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-17:1/0 = 0
-17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-18:1/0 = 0
-18:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-19:1/0 = 0
-19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-20:1/0 = 0
-20:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-21:1/0 = 0
-21:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-22:1/0 = 0
-22:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-23:1/0 = 0
-23:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-23:0/0 = 0
-23:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-22:0/0 = 0
-22:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-21:0/0 = 0
-21:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-20:0/0 = 0
-20:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-19:0/0 = 0
-19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-18:0/0 = 0
-18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-17:0/0 = 0
-17:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-16:0/0 = 0
-16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-15:0/0 = 0
-15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-14:0/0 = 0
-14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-13:0/0 = 0
-13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-12:0/0 = 0
-12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-11:0/0 = 0
-11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-11:0/0/custom_data_0 = true
-10:0/0 = 0
-10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-10:0/0/custom_data_0 = true
-9:0/0 = 0
-9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-9:0/0/custom_data_0 = true
-8:0/0 = 0
-8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-8:0/0/custom_data_0 = true
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -132,78 +61,6 @@ texture = ExtResource("1_o5qli")
 5:2/0 = 0
 6:2/0 = 0
 7:2/0 = 0
-8:2/0 = 0
-8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-8:2/0/custom_data_0 = true
-9:2/0 = 0
-9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-9:2/0/custom_data_0 = true
-10:2/0 = 0
-10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-10:2/0/custom_data_0 = true
-11:2/0 = 0
-11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-11:2/0/custom_data_0 = true
-12:2/0 = 0
-12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-13:2/0 = 0
-13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-14:2/0 = 0
-14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-15:2/0 = 0
-15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-20:2/0 = 0
-20:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-21:2/0 = 0
-21:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-22:2/0 = 0
-22:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-23:2/0 = 0
-23:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-19:2/0 = 0
-19:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-18:2/0 = 0
-18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-17:2/0 = 0
-17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-16:2/0 = 0
-16:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-23:3/0 = 0
-23:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-22:3/0 = 0
-22:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-21:3/0 = 0
-21:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-20:3/0 = 0
-20:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-19:3/0 = 0
-19:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-18:3/0 = 0
-18:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-17:3/0 = 0
-17:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-16:3/0 = 0
-16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-15:3/0 = 0
-15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-14:3/0 = 0
-14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-13:3/0 = 0
-13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-12:3/0 = 0
-12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-11:3/0 = 0
-11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-11:3/0/custom_data_0 = true
-10:3/0 = 0
-10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-10:3/0/custom_data_0 = true
-9:3/0 = 0
-9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-9:3/0/custom_data_0 = true
-8:3/0 = 0
-8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-8:3/0/custom_data_0 = true
 7:3/0 = 0
 6:3/0 = 0
 5:3/0 = 0
@@ -212,103 +69,6 @@ texture = ExtResource("1_o5qli")
 2:3/0 = 0
 1:3/0 = 0
 0:3/0 = 0
-4:4/0 = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-4:4/0/custom_data_0 = true
-5:4/0 = 0
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-5:4/0/custom_data_0 = true
-6:4/0 = 0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-6:4/0/custom_data_0 = true
-7:4/0 = 0
-7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-7:4/0/custom_data_0 = true
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-11:5/0 = 0
-11:6/0 = 0
-11:7/0 = 0
-10:7/0 = 0
-9:7/0 = 0
-8:7/0 = 0
-8:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-7:7/0 = 0
-7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-7:7/0/custom_data_0 = true
-6:7/0 = 0
-6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-6:7/0/custom_data_0 = true
-5:7/0 = 0
-5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-5:7/0/custom_data_0 = true
-4:7/0 = 0
-4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-4:7/0/custom_data_0 = true
-4:6/0 = 0
-4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-4:6/0/custom_data_0 = true
-4:5/0 = 0
-4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-4:5/0/custom_data_0 = true
-5:5/0 = 0
-5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-5:5/0/custom_data_0 = true
-6:5/0 = 0
-6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-6:5/0/custom_data_0 = true
-7:5/0 = 0
-7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-7:5/0/custom_data_0 = true
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-9:6/0 = 0
-8:6/0 = 0
-7:6/0 = 0
-7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-7:6/0/custom_data_0 = true
-6:6/0 = 0
-6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-6:6/0/custom_data_0 = true
-5:6/0 = 0
-5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
-5:6/0/custom_data_0 = true
-10:6/0 = 0
-24:0/0 = 0
-25:0/0 = 0
-26:0/0 = 0
-27:0/0 = 0
-28:0/0 = 0
-29:0/0 = 0
-30:0/0 = 0
-31:0/0 = 0
-31:1/0 = 0
-30:1/0 = 0
-29:1/0 = 0
-28:1/0 = 0
-27:1/0 = 0
-26:1/0 = 0
-25:1/0 = 0
-24:1/0 = 0
-24:2/0 = 0
-25:2/0 = 0
-26:2/0 = 0
-27:2/0 = 0
-28:2/0 = 0
-29:2/0 = 0
-30:2/0 = 0
-31:2/0 = 0
-31:3/0 = 0
-30:3/0 = 0
-29:3/0 = 0
-28:3/0 = 0
-27:3/0 = 0
-26:3/0 = 0
-25:3/0 = 0
-24:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_sugp2"]
 physics_layer_0/collision_layer = 1
@@ -1797,5 +1557,274 @@ position = Vector2(14, 0)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
-[node name="Enemy" parent="." unique_id=843341777 instance=ExtResource("3_jyhfs")]
-position = Vector2(1409, 171)
+[node name="Enemies" type="Node" parent="." unique_id=167003935]
+
+[node name="Enemy" parent="Enemies" unique_id=843341777 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(267, 745)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy2" parent="Enemies" unique_id=336564608 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(111, 664)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy3" parent="Enemies" unique_id=2129299339 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(230, 625)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy4" parent="Enemies" unique_id=1194535458 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(110, 232)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy5" parent="Enemies" unique_id=1505233095 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(217, 231)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy6" parent="Enemies" unique_id=218428982 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(92, 129)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy7" parent="Enemies" unique_id=754687907 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(165, 85)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy8" parent="Enemies" unique_id=1361219736 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(277, 73)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy9" parent="Enemies" unique_id=1240844555 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(299, 133)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy10" parent="Enemies" unique_id=655104888 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(864, 261)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal2")
+
+[node name="Enemy11" parent="Enemies" unique_id=911981078 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(969, 258)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal2")
+
+[node name="Enemy12" parent="Enemies" unique_id=2037901255 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(867, 136)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal2")
+
+[node name="Enemy13" parent="Enemies" unique_id=1906000888 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(964, 137)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal2")
+
+[node name="Enemy14" parent="Enemies" unique_id=1240338774 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(803, 131)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal2")
+
+[node name="Enemy15" parent="Enemies" unique_id=1262858560 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(815, 239)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal2")
+
+[node name="Enemy16" parent="Enemies" unique_id=52701009 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(697, 452)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal5")
+
+[node name="Enemy17" parent="Enemies" unique_id=1894620426 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(810, 520)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal5")
+
+[node name="Enemy18" parent="Enemies" unique_id=1109144916 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(861, 500)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal5")
+
+[node name="Enemy19" parent="Enemies" unique_id=1468702780 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(850, 457)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal5")
+
+[node name="Enemy20" parent="Enemies" unique_id=208425334 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(715, 883)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal6")
+
+[node name="Enemy21" parent="Enemies" unique_id=1275267015 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(687, 652)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal5")
+
+[node name="Enemy22" parent="Enemies" unique_id=1858601 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(563, 516)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal5")
+
+[node name="Enemy23" parent="Enemies" unique_id=1786856041 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(994, 764)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy24" parent="Enemies" unique_id=1733016040 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1092, 764)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy25" parent="Enemies" unique_id=860306914 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1279, 878)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy26" parent="Enemies" unique_id=850592829 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1312, 739)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy27" parent="Enemies" unique_id=1109210799 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1378, 665)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy28" parent="Enemies" unique_id=1051173028 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1486, 669)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy29" parent="Enemies" unique_id=1775757528 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1400, 832)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy30" parent="Enemies" unique_id=1544625689 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1461, 888)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy31" parent="Enemies" unique_id=1240254256 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1508, 807)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy32" parent="Enemies" unique_id=14675431 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1392, 774)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy33" parent="Enemies" unique_id=451350626 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1168, 176)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy34" parent="Enemies" unique_id=1050033362 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1173, 86)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy35" parent="Enemies" unique_id=1367365539 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1210, 289)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy36" parent="Enemies" unique_id=2102861783 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1310, 332)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy37" parent="Enemies" unique_id=1756691277 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1378, 298)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy38" parent="Enemies" unique_id=766772407 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1402, 252)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy39" parent="Enemies" unique_id=1707203272 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1544, 209)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy40" parent="Enemies" unique_id=1291978598 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1553, 146)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy41" parent="Enemies" unique_id=956992607 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1553, 56)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy42" parent="Enemies" unique_id=898691654 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1393, 84)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal3")
+
+[node name="Enemy43" parent="Enemies" unique_id=1882316471 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(911, 51)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal2")
+
+[node name="Enemy44" parent="Enemies" unique_id=2084447995 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(344, 237)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy45" parent="Enemies" unique_id=747966067 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(575, 245)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy46" parent="Enemies" unique_id=1656609859 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(624, 134)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal")
+
+[node name="Enemy47" parent="Enemies" unique_id=1007254941 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1094, 497)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy48" parent="Enemies" unique_id=1998897402 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1066, 555)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy49" parent="Enemies" unique_id=2026743900 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1141, 580)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Enemy50" parent="Enemies" unique_id=600507145 node_paths=PackedStringArray("player", "base") instance=ExtResource("3_jyhfs")]
+position = Vector2(1306, 556)
+player = NodePath("../../Player")
+base = NodePath("../../Bases/EnemyGoal4")
+
+[node name="Bases" type="Node" parent="." unique_id=466395860]
+
+[node name="EnemyGoal" parent="Bases" unique_id=1889767450 instance=ExtResource("4_jyhfs")]
+position = Vector2(161, 127)
+
+[node name="EnemyGoal2" parent="Bases" unique_id=1007350476 instance=ExtResource("4_jyhfs")]
+position = Vector2(913, 159)
+
+[node name="EnemyGoal3" parent="Bases" unique_id=1876255615 instance=ExtResource("4_jyhfs")]
+position = Vector2(1501, 56)
+
+[node name="EnemyGoal4" parent="Bases" unique_id=718923852 instance=ExtResource("4_jyhfs")]
+position = Vector2(1504, 841)
+
+[node name="EnemyGoal5" parent="Bases" unique_id=1326765537 instance=ExtResource("4_jyhfs")]
+position = Vector2(766, 440)
+
+[node name="EnemyGoal6" parent="Bases" unique_id=996869789 instance=ExtResource("4_jyhfs")]
+position = Vector2(608, 824)

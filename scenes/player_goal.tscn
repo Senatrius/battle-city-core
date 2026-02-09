@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ifmhx4qe6wjh"]
+
+[ext_resource type="Texture2D" uid="uid://dxgkf8yxnrhmr" path="res://assets/sprites/terrain.png" id="1_v1cba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35ct5"]
+size = Vector2(16, 16)
+
+[node name="PlayerGoal" type="Area2D" unique_id=1851590206]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=466458572]
+texture_filter = 1
+texture = ExtResource("1_v1cba")
+region_enabled = true
+region_rect = Rect2(48, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1460757241]
+shape = SubResource("RectangleShape2D_35ct5")
