@@ -2,12 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://d0nyl3r7rpddy" path="res://assets/sprites/projectiles.png" id="1_c8fcr"]
 [ext_resource type="Script" uid="uid://chdfk4qilmtqb" path="res://scripts/projectile.gd" id="1_q3m7n"]
+[ext_resource type="PackedScene" uid="uid://uw2u0n6e8up3" path="res://scenes/hit.tscn" id="2_softn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3m7n"]
 size = Vector2(4, 2)
 
 [node name="Projectile" type="Area2D" unique_id=1606135502]
+collision_layer = 0
+collision_mask = 160
 script = ExtResource("1_q3m7n")
+hit_animation = ExtResource("2_softn")
+radius = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1876144958]
 texture_filter = 1

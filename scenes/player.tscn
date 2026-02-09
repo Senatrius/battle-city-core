@@ -23,7 +23,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
 size = Vector2(11, 10)
 
-[node name="Player" type="CharacterBody2D" unique_id=1317681465]
+[node name="Player" type="CharacterBody2D" unique_id=1317681465 groups=["player"]]
+collision_layer = 2
+collision_mask = 245
 motion_mode = 1
 script = ExtResource("1_g2els")
 tank_data = ExtResource("2_qhqgy")

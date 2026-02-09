@@ -14,6 +14,11 @@ config/name="battle-city"
 run/main_scene="uid://cankn74ar0epu"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[global_group]
+
+player=""
+enemy=""
+
 [input]
 
 up={
@@ -45,6 +50,17 @@ shoot={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="Ground"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
+2d_physics/layer_4="Player Bullet"
+2d_physics/layer_5="Enemy Bullet"
+2d_physics/layer_6="Impassable"
+2d_physics/layer_7="Bullet pass"
+2d_physics/layer_8="Breakable"
 
 [physics]
 

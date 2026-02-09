@@ -41,4 +41,5 @@ func shoot() -> void:
 	bullet.data = tank_data.projectileData
 	bullet.position = projectileOrigin.global_position;
 	bullet.rotation = rotation
+	bullet.setup(true)
 	get_parent().add_child(bullet)

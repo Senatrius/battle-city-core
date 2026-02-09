@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://uw2u0n6e8up3"]
+
+[ext_resource type="Texture2D" uid="uid://bao5hwoee3jj6" path="res://assets/sprites/effects.png" id="1_dp18a"]
+[ext_resource type="Script" uid="uid://ddu67b0igmapc" path="res://scripts/hit.gd" id="2_3e6ij"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e6ij"]
+atlas = ExtResource("1_dp18a")
+region = Rect2(8, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xlq3"]
+atlas = ExtResource("1_dp18a")
+region = Rect2(21, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6u6db"]
+atlas = ExtResource("1_dp18a")
+region = Rect2(34, 0, 13, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1q6yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e6ij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xlq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6u6db")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Hit" type="AnimatedSprite2D" unique_id=1140780520]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1q6yf")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
+script = ExtResource("2_3e6ij")
