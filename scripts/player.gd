@@ -43,3 +43,6 @@ func shoot() -> void:
 	bullet.rotation = rotation
 	bullet.setup(true)
 	get_parent().add_child(bullet)
+
+func hit() -> void:
+	EventHandler.player_hit.emit()

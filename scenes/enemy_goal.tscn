@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://d06ipxj3ffinh"]
 
 [ext_resource type="Texture2D" uid="uid://dxgkf8yxnrhmr" path="res://assets/sprites/terrain.png" id="1_ea0xo"]
+[ext_resource type="Script" uid="uid://2sle0280jrdn" path="res://scripts/enemy_goal.gd" id="1_wchj0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wchj0"]
 size = Vector2(16, 16)
 
 [node name="EnemyGoal" type="Area2D" unique_id=1889767450]
+script = ExtResource("1_wchj0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2092570868]
 texture_filter = 1

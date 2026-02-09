@@ -109,4 +109,6 @@ func die() -> void:
 	explosion.global_position = global_position
 	get_parent().add_child(explosion)
 	
+	EventHandler.enemy_died.emit()
+	
 	queue_free()

@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://b34rplbivvgrl" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c4mtxu8u0a0v1" path="res://scenes/enemy.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://d06ipxj3ffinh" path="res://scenes/enemy_goal.tscn" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://ur5530qqnoiy" path="res://scripts/healthLabel.gd" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://d0704tw68i6h5" path="res://scripts/enemyLabal.gd" id="6_tefeu"]
+[ext_resource type="Script" uid="uid://bci1c0to38214" path="res://scripts/basesLabel.gd" id="7_o6xl0"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_sugp2"]
 tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 2, 196608, 0, 3, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 2, 196609, 65536, 3, 2, 131072, 0, 65538, 131072, 1, 131074, 131072, 2, 196610, 131072, 2, 3, 196608, 0, 65539, 196608, 1, 131075, 131072, 2, 196611, 131072, 2)
@@ -1811,20 +1814,46 @@ base = NodePath("../../Bases/EnemyGoal4")
 
 [node name="Bases" type="Node" parent="." unique_id=466395860]
 
-[node name="EnemyGoal" parent="Bases" unique_id=1889767450 instance=ExtResource("4_jyhfs")]
+[node name="EnemyGoal" parent="Bases" unique_id=1889767450 groups=["enemy_bases"] instance=ExtResource("4_jyhfs")]
 position = Vector2(161, 127)
 
-[node name="EnemyGoal2" parent="Bases" unique_id=1007350476 instance=ExtResource("4_jyhfs")]
+[node name="EnemyGoal2" parent="Bases" unique_id=1007350476 groups=["enemy_bases"] instance=ExtResource("4_jyhfs")]
 position = Vector2(913, 159)
 
-[node name="EnemyGoal3" parent="Bases" unique_id=1876255615 instance=ExtResource("4_jyhfs")]
+[node name="EnemyGoal3" parent="Bases" unique_id=1876255615 groups=["enemy_bases"] instance=ExtResource("4_jyhfs")]
 position = Vector2(1501, 56)
 
-[node name="EnemyGoal4" parent="Bases" unique_id=718923852 instance=ExtResource("4_jyhfs")]
+[node name="EnemyGoal4" parent="Bases" unique_id=718923852 groups=["enemy_bases"] instance=ExtResource("4_jyhfs")]
 position = Vector2(1504, 841)
 
-[node name="EnemyGoal5" parent="Bases" unique_id=1326765537 instance=ExtResource("4_jyhfs")]
+[node name="EnemyGoal5" parent="Bases" unique_id=1326765537 groups=["enemy_bases"] instance=ExtResource("4_jyhfs")]
 position = Vector2(766, 440)
 
-[node name="EnemyGoal6" parent="Bases" unique_id=996869789 instance=ExtResource("4_jyhfs")]
+[node name="EnemyGoal6" parent="Bases" unique_id=996869789 groups=["enemy_bases"] instance=ExtResource("4_jyhfs")]
 position = Vector2(608, 824)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1459558335]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1837305755]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 40.0
+grow_horizontal = 2
+size_flags_stretch_ratio = 1.63
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Hits taken" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=560568549]
+layout_mode = 2
+script = ExtResource("5_tbgi4")
+
+[node name="Enemies" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=258777493]
+layout_mode = 2
+script = ExtResource("6_tefeu")
+
+[node name="Bases" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1127864197]
+layout_mode = 2
+script = ExtResource("7_o6xl0")
